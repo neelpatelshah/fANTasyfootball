@@ -1,22 +1,18 @@
-import logo from './logo.svg';
+import img from './champ.jpeg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={img} className="App-logo" alt="logo" />
+        <h3>
+          fANTasy football 2021-2022 champ: Pee Piggins
+        </h3>
+        <h5>
+          Runner Up: Tyler Stock
+        </h5>
+        <p> FMVP: Sun Gawd </p>
       </header>
     </div>
   );
