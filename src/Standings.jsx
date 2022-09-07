@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { merge } from "./util"
 
 const Row = ({user, team, wins, losses, ties, streak}) => {
@@ -22,10 +22,10 @@ const Standings = ({ setTeams }) => {
 
     const [league, setLeague] = useState([])
 
-    const setter = (newData, standings) => {
+    const setter = useCallback((newData, standings) => {
         setLeague(merge(newData, standings))
         setTeams(merge(newData, standings))
-    }
+    }, [setTeams])
 
     useEffect(() => {
         fetch("https://api.sleeper.app/v1/league/861492945273094144/rosters")
@@ -50,7 +50,7 @@ const Standings = ({ setTeams }) => {
                         setter(newData, standings)
                 })
             })
-    }, [])
+    }, [setter])
 
     return (
         <div>
