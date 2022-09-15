@@ -153,11 +153,10 @@ const rankings = [
 ]
 
 const RankChange = ({position, lastPosition}) => {
-    console.log(position, lastPosition)
     if (position > lastPosition) {
-        return <span style={{color: "#48c74a"}}>+{position-lastPosition}</span>
+        return <span style={{color: "#c92e20"}}>-{position-lastPosition}</span>
     } else if (position < lastPosition) {
-        return <span style={{color: "#c92e20"}}>{position-lastPosition}</span>
+        return <span style={{color: "#48c74a"}}>+{lastPosition-position}</span>
     } else {
         console.log("even")
         return <span style={{color: "#cca029"}}>-</span>
