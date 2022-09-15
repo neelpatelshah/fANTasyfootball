@@ -23,8 +23,10 @@ const Standings = ({ setTeams }) => {
     const [league, setLeague] = useState([])
 
     const setter = useCallback((newData, standings) => {
-        setLeague(merge(newData, standings))
-        setTeams(merge(newData, standings))
+        const data = merge(newData, standings)
+        console.log(data.sort((a, b) => b.wins - a.wins))
+        setLeague(data)
+        setTeams(data)
     }, [setTeams])
 
     useEffect(() => {
