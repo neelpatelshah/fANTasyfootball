@@ -3,7 +3,8 @@ import Button from '../Button'
 
 const weeks = [
     { label: "Week 1", page: "WEEK_1" },
-    { label: "Week 2", page: "WEEK_2"}
+    { label: "Week 2", page: "WEEK_2"},
+    { label: "Week 3", page: "WEEK_3"}
 ]
 
 const All = ({ setPage }) => {
