@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useMediaQuery } from "react-responsive"
+
 import logo from './fantasy.png'
 import Button from './Button'
 import Standings from './Standings'
@@ -13,6 +15,7 @@ const Home = () => {
 
     const [page, setPage] = useState("HOME")
     const [teams, setTeams] = useState([])
+    const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return (
         <div style={styles.page}>
@@ -26,19 +29,21 @@ const Home = () => {
                 setPage={setPage} 
                 teams={teams}
                 setTeams={setTeams}
+                isMobile={isMobile}
             />
         </div>
     )
 }
 
-const Contents = ({page, setPage, teams, setTeams}) => {
+const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
     switch (page) {
         case "HOME":
             return (
                 <div style={styles.page}>
-                    <h2>
-                        🏆 2021-2022 champ 🏆: Pee Piggins
-                    </h2>
+                    {isMobile ?
+                        <h3> 🏆 2021-2022 champ 🏆: Pee Piggins </h3>
+                        : <h2> 🏆 2021-2022 champ 🏆: Pee Piggins </h2>
+                    }
                     <h5>
                         😷 Runner Up 😷: Tyler Stock
                     </h5>
@@ -47,7 +52,7 @@ const Contents = ({page, setPage, teams, setTeams}) => {
                         label="View Week 5 Power Rankings"
                         onPress={() => setPage("WEEK_5")}
                     />
-                    <Standings setTeams={setTeams}/>
+                    <Standings setTeams={setTeams} isMobile={isMobile}/>
                     <Button 
                         width={250}
                         label="View All Power Rankings"
@@ -77,7 +82,7 @@ const Contents = ({page, setPage, teams, setTeams}) => {
             )
         case "WEEK_5":
             return (
-                <Week5 teams={teams}/>
+                <Week5 teams={teams} isMobile={isMobile}/>
             )
         default: 
             return <></>

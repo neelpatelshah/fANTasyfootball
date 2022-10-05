@@ -157,29 +157,49 @@ const RankChange = ({position, lastPosition}) => {
     }
 }
 
-const Ranking = ({ team, wins, losses, ties, streak, position, lastPosition, upcoming, blurb, owner, user, game, up, down }) => {
+const Ranking = ({ team, wins, losses, ties, streak, position, lastPosition, upcoming, blurb, owner, user, game, up, down, isMobile }) => {
     return (
         <div style={styles.ranking}>
             <div style={styles.rankingHeader}>
-                <h2>#{position} [<RankChange position={position} lastPosition={lastPosition}/>]: {team || user}</h2>
-                <h2>{wins}-{losses}</h2>
+                {isMobile ? (
+                        <>
+                            <h3>#{position} [<RankChange position={position} lastPosition={lastPosition}/>]: {team || user}</h3>
+                            <h3>{wins}-{losses}</h3>
+                        </>
+                    ) : (
+                        <>
+                            <h2>#{position} [<RankChange position={position} lastPosition={lastPosition}/>]: {team || user}</h2>
+                            <h2>{wins}-{losses}</h2>
+                        </>
+                    )
+                }   
             </div>
-            <div style={styles.awards}>
-                <h5>Last Game: {game}</h5>
-                <h5>📈: {up}</h5>
-                <h5>📉: {down}</h5>
-            </div>
+            {isMobile ? (
+                    <div style={styles.awardsM}>
+                        <h5 style={styles.awardRow}>Last Game: {game}</h5>
+                        <h5 style={styles.awardRow}>📈: {up}</h5>
+                        <h5 style={styles.awardRow}>📉: {down}</h5>
+                    </div>
+                ) : (
+                    <div style={styles.awardsD}>
+                        <h5>Last Game: {game}</h5>
+                        <h5>📈: {up}</h5>
+                        <h5>📉: {down}</h5>
+                    </div>
+                )
+
+            }
             <p style={styles.blurb}>{blurb}</p>
             <h6>Upcoming: {upcoming}</h6>
         </div>
     )
 }
 
-const Week5 = ({ teams }) => {
+const Week5 = ({ teams, isMobile }) => {
     const data = merge(teams, rankings)
     data.sort((a, b) => b.position - a.position)
     return (
-        <div style={styles.page}>
+        <div style={{...styles.page, width: isMobile ? 380 : 700}}>
             <h3> WEEK 5 POWER RANKINGS </h3>
             <div style={styles.article}>
                 <p>
@@ -193,11 +213,11 @@ const Week5 = ({ teams }) => {
                     <br/>
                     Let's dive in.
                 </p>
-                <img src={Week5Photo} alt="" style={{width: 600, alignSelf: "center"}}/>
+                <img src={Week5Photo} alt="" style={{width: isMobile ? 350 : 600, alignSelf: "center"}}/>
             </div>
-            <div style={styles.rankingsContainer}>
+            <div style={isMobile ? styles.rankingsContainerM : styles.rankingsContainerD}>
                 {data.map((team, index) => 
-                    <Ranking {...team} key={index}/>
+                    <Ranking {...team} key={index} isMobile={isMobile}/>
                 )}
             </div>
         </div>
@@ -211,7 +231,6 @@ const styles = {
         justifyContent: "flex-start",
         alignItems: "center",
         color: "white",
-        width: 700,
     },
     article: {
         display: "flex",
@@ -225,9 +244,11 @@ const styles = {
         borderBottom: "1px dotted white",
         padding: 12
     },
-    rankingsContainer: {
+    rankingsContainerD: {
         width: 700
-
+    },
+    rankingsContainerM: {
+        width: 380
     },
     rankingHeader: {
         display: "flex",
@@ -240,7 +261,7 @@ const styles = {
         justifyContent: "flex-start",
         lineHeight: 1.5,
     },
-    awards: {
+    awardsD: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -248,6 +269,16 @@ const styles = {
         width: 500,
         marginLeft: 100
     },
+    awardsM: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        width: 250,
+        marginLeft: 5,
+    },
+    awardRow: {
+        margin: 3
+    }
 }
 
 export default Week5;
