@@ -1,4 +1,4 @@
-# fANTady football is in it's 3rd season
+# fANTasy football is in it's 3rd season
 
 the best dang fantasy league on the planet.
 
