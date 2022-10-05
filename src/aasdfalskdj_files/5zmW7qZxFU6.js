@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
+
+__d("UFITypingSubscription",["BaseGraphQLSubscription","UFITypingSubscription.graphql"],(function(a,b,c,d,e,f,g){var h;a=function(a){babelHelpers.inheritsLoose(c,a);function c(){return a.apply(this,arguments)||this}var d=c.prototype;d.getTopic=function(a){return"gqls/"+this.getSubscriptionName()+"/feedback_id_"+a};d.getQuery=function(){return h!==void 0?h:h=b("UFITypingSubscription.graphql")};d.getQueryParameters=function(a){return{input:{feedback_id:a}}};return c}(c("BaseGraphQLSubscription"));g["default"]=a}),98);
