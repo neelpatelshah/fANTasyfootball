@@ -10,6 +10,7 @@ import Week2 from './PowerRankings/Week2'
 import Week3 from './PowerRankings/Week3'
 import Week4 from './PowerRankings/Week4'
 import Week5 from './PowerRankings/Week5'
+import Week6 from './PowerRankings/Week6'
 
 const Home = () => {
 
@@ -49,8 +50,8 @@ const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
                     </h5>
                     <Button 
                         width={250}
-                        label="View Week 5 Power Rankings"
-                        onPress={() => setPage("WEEK_5")}
+                        label="View Week 6 Power Rankings"
+                        onPress={() => setPage("WEEK_6")}
                     />
                     <Standings setTeams={setTeams} isMobile={isMobile}/>
                     <Button 
@@ -83,6 +84,10 @@ const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
         case "WEEK_5":
             return (
                 <Week5 teams={teams} isMobile={isMobile}/>
+            )
+        case "WEEK_6":
+            return (
+                <Week6 teams={teams} isMobile={isMobile}/>
             )
         default: 
             return <></>
