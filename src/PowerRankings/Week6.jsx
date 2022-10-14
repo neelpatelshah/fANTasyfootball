@@ -215,11 +215,12 @@ const Week6 = ({ teams, isMobile }) => {
             <h3> WEEK 5 POWER RANKINGS </h3>
             <div style={styles.article}>
                 <p>
-                    I did not watch much football besides TNF, the Jets, and MNF, so I don't have a lot to say this week. For that reason,
-                    I don't have any analysis to dive into, but I do have a few things to say. <br/>
+                    We have some new, groundbreaking analysis coming from a new contributor this week! If the takes are shit, that's our
+                    excuse for why. The main guy decided to take the week off or something we don't really know. He's a bum, clearly. Anyways,
+                    here's a brief, brief recap of the week: <br/>
                     <br/>
                     Zach Wilson and the Jets are coming, Russ sucks, the Colts suck, Patty M is good, and Davante should see 10 targets a week
-                    no matter how ill advised they are. <br/>
+                    no matter how ill-advised they are. <br/>
                     <br/>
                     Let's look at rankings.
                 </p>
