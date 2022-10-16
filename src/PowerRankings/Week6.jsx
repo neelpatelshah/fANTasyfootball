@@ -212,7 +212,7 @@ const Week6 = ({ teams, isMobile }) => {
     data.sort((a, b) => b.position - a.position)
     return (
         <div style={{...styles.page, width: isMobile ? 380 : 700}}>
-            <h3> WEEK 5 POWER RANKINGS </h3>
+            <h3> WEEK 6 POWER RANKINGS </h3>
             <div style={styles.article}>
                 <p>
                     We have some new, groundbreaking analysis coming from a new contributor this week! If the takes are shit, that's our
