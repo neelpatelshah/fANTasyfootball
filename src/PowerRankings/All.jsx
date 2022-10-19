@@ -8,6 +8,7 @@ const weeks = [
     { label: "Week 4", page: "WEEK_4"},
     { label: "Week 5", page: "WEEK_5"},
     { label: "Week 6", page: "WEEK_6"},
+    { label: "Week 7", page: "WEEK_7"},
 ]
 
 const All = ({ setPage }) => {
