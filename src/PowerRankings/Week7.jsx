@@ -103,7 +103,7 @@ const rankings = [
         lastPosition: 2,
         up: "Brian Robinson",
         down: "Elijah Moore",
-        game: "L 137.56",
+        game: "W 142.80",
         upcoming: "Mixon deez (5-1)",
         blurb: `The defending champ claims #1 for the first time this season because we said so. Also, he notches another TOTW, is the league's
         lone 4-2 team, and is balanced enough to weather BYE shennanigans. Not to mention, there's an Elijah Mitchell-sized trick up his sleeve. 
