@@ -1,4 +1,4 @@
-import { merge } from '../util'
+import { merge } from '../../util'
 import React from 'react'
 import photo from '../7.jpg'
 
@@ -35,13 +35,14 @@ const rankings = [
         owner: "740648111118147584",
         position: 8,
         lastPosition: 8,
-        up: "Allen Lazard",
-        down: "George Pickens",
-        game: "L 94.92",
+        up: "Deandre Hopkins",
+        down: "Tomy Brady",
+        game: "L 122.80",
         upcoming: "βαβηκαταΣΥΣΥ (3-3)",
-        blurb: `Allan stays true to his season trend and turns in a sub-100 loss after a massive week, because obviously. Mike Williams embodied
-        this more than anyone else on the team, and Higbee and Wilson also had tough weeks. We're seeing a cozy 6-7 for the season if this pattern
-        keeps up, so until we see some consistency, this team is probably going to hang around here for some time.`
+        blurb: `A loss keeps Allan snugly in 8th. Nuk's return wasn't enough to match up against a big time showing from Saarang, but at least
+        he deviated from his boom or bust style and put up a solid point total. Likely the shakiest of the 3-4 teams, he needs a lot of things
+        to fall his way to make this work. Brady has to step it up in a big way, Stevenson needs to keep being the offense, Waller needs to
+        pick it up big time, Nuk can't really slow down. You get the picture. Not a lot of consistency is ensured here.`
     },
     {
         //Nicole
@@ -74,14 +75,15 @@ const rankings = [
         owner: "870659100365737984",
         position: 9,
         lastPosition: 10,
-        up: "Gabe Davis",
-        down: "Tyler Allgeier",
-        game: "L 98.92",
+        up: "Tyler Boyd",
+        down: "Justin Herbert",
+        game: "W 144.32",
         upcoming: "Daeivoantae's Inferno (5-1)",
-        blurb: `Mike gets a bump because by all logic, this should have been a win. Herbert had thrown a TD pass in 23 straight games or something
-        and averages 293 passing yards a game. Him having a just below career average game nets Mike a win. But something was up today, to the point
-        where the books boosted Herbert to throw a TD to +100 from like -215 or something. Someone was interfering. This should have been a W, but
-        instead, Mike remains the only winless team.`
+        blurb: `HE WON. Mike snaps his winless season in true style, notching TOTW and beating the second highest scoring team, so every bit of the
+        win is deserved. While 1 win on the season pretty much ties our hands as far as movement in rankings goes, he has certainly earned his premature
+        bump up to #9, so here he stays. Key to the win was Tyler Boyd and the Bengals eruption, and key to the TOTW was an undying faith to his boys
+        Defense. THe best part of this win, though, is that there was decent contribution up and down the lineup, even with some solid players on BYE.
+        We love this outcome and it putting a pin in any narrative Danny can build that he's not a fraud, because he lost. Electric.`
     },
     {
         //Logan
@@ -100,7 +102,7 @@ const rankings = [
         //Neel
         owner: "722992153168531456",
         position: 1,
-        lastPosition: 2,
+        lastPosition: 1,
         up: "Brian Robinson",
         down: "Elijah Moore",
         game: "W 142.80",
@@ -130,12 +132,12 @@ const rankings = [
         position: 10,
         lastPosition: 9,
         up: "Brandon Aiyuk",
-        down: "Raheem Mostert",
-        game: "L 89.80",
+        down: "Jaylen Waddle",
+        game: "W 124.06",
         upcoming: "Tyler Stock (3-3)",
-        blurb: `Yet another ugly loss as Ram notches LOTW and we slide him down to #10 just for funsies. He left a ton of points on the bench
-        in a week where even just one of those players starting would have earned him a win. This team needs 2021 JT back in the worst way. 
-        Keenan Allen wouldn't hurt either. But most of all, not starting 2 RBs on the same team would be good. Christ.`
+        blurb: `Ram notches a win with an absurd week from Joe Burrow making his point total look solid. The record is still bad and Mike also won,
+        so he doesn't move up here, and also the returned reinforcements of JT and Keenan did not produce at a level that would make us think this
+        team belongs with the ones hovering around .500. Arrow is pointed up, though.`
     },
 ]
 
@@ -187,24 +189,15 @@ const Ranking = ({ team, wins, losses, ties, streak, position, lastPosition, upc
     )
 }
 
-const Week7 = ({ teams, isMobile }) => {
+const Week8 = ({ teams, isMobile }) => {
     const data = merge(teams, rankings)
     data.sort((a, b) => b.position - a.position)
     return (
         <div style={{...styles.page, width: isMobile ? 380 : 700}}>
-            <h3> WEEK 7 POWER RANKINGS </h3>
+            <h3> WEEK 8 POWER RANKINGS </h3>
             <div style={styles.article}>
                 <p>
-                    Upset city in the NFL this week. Rookies are balling. Vets are failing. Times are changing. <br/>
-                    <br/>
-                    The Jets handed the Packers their worst home loss in like 20 years, the Giants made Lamar look like a fool in crunch time,
-                    the Vikings are quietly 5-1 after a string of ugly wins, Tom Brady is really going through it, the Cooper Rush magic finally
-                    wore off a bit while the Eagles magic didn't, the Bears are B A D, Joe Burreaux returned to his old stomping grounds and stomped,
-                    the Bills outlasted the Chiefs in a real letdown of a game, and the Broncos really have issues man. <br/>
-                    <br/>
-                    We're also seeing a bit of a trend with #1 ranked teams immediately losing. Does that continue this week? Who is the new #1? <br/>
-                    <br/>
-                    Let's dive in.
+                    The only thing I wish to use this section for this week is to see if anyone knows how to donate an ACL.
                 </p>
                 <img src={photo} alt="" style={{width: isMobile ? 350 : 600, alignSelf: "center"}}/>
             </div>
@@ -274,4 +267,4 @@ const styles = {
     }
 }
 
-export default Week7;
+export default Week8;

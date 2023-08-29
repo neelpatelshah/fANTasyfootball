@@ -1,4 +1,4 @@
-import { merge } from '../util'
+import { merge } from '../../util'
 import React from 'react'
 import Week4Photo from '../4.webp'
 

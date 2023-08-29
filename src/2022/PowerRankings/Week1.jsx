@@ -1,4 +1,4 @@
-import { merge } from '../util'
+import { merge } from '../../util'
 import React from 'react'
 
 const rankings = [
@@ -306,7 +306,7 @@ const styles = {
         flexDirection: "column",
         justifyContent: "flex-start",
         lineHeight: 1.5,
-    }
+    },
 }
 
 export default Week1;

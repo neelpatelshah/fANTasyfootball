@@ -1,4 +1,4 @@
-import { merge } from '../util'
+import { merge } from '../../util'
 import React from 'react'
 import jamar from "../AP_Steelers_Bengals_Football.webp"
 

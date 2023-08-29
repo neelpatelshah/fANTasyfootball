@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { merge } from "./util"
+import { merge, fetchLeagueInfo } from "./util"
 
 const Row = ({user, team, wins, losses, ties, streak, isMobile}) => {
     return (
@@ -38,28 +38,7 @@ const Standings = ({ setTeams, isMobile }) => {
     }, [setTeams])
 
     useEffect(() => {
-        fetch("https://api.sleeper.app/v1/league/861492945273094144/rosters")
-            .then((res) => res.json())
-            .then((data) => {
-                const standings = data.map(team => { return { 
-                    owner: team.owner_id,
-                    wins: team.settings.wins,
-                    losses: team.settings.losses,
-                    ties: team.settings.ties,
-                    streak: team.metadata.streak
-                }})
-                fetch("https://api.sleeper.app/v1/league/861492945273094144/users")
-                    .then((res) => res.json())
-                    .then((data) => {
-                        const newData = data.map(team => { return {
-                            owner: team.user_id,
-                            user: team.display_name,
-                            team: team.metadata.team_name
-                        }})
-                        
-                        setter(newData, standings)
-                })
-            })
+        fetchLeagueInfo("2023", setter)
     }, [setter])
 
     return (
