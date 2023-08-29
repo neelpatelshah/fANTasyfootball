@@ -216,15 +216,15 @@ const rankings = [
     },
 ]
 
-const RankChange = ({position, lastPosition}) => {
-    if (position > lastPosition) {
-        return <span style={{color: "#c92e20"}}>-{position-lastPosition}</span>
-    } else if (position < lastPosition) {
-        return <span style={{color: "#48c74a"}}>+{lastPosition-position}</span>
-    } else {
-        return <span style={{color: "#cca029"}}>-</span>
-    }
-}
+// const RankChange = ({position, lastPosition}) => {
+//     if (position > lastPosition) {
+//         return <span style={{color: "#c92e20"}}>-{position-lastPosition}</span>
+//     } else if (position < lastPosition) {
+//         return <span style={{color: "#48c74a"}}>+{lastPosition-position}</span>
+//     } else {
+//         return <span style={{color: "#cca029"}}>-</span>
+//     }
+// }
 
 const Ranking = ({ team, wins, losses, position, upcoming, blurb, user, mvp, best, worst, roster, isMobile }) => {
     return (
