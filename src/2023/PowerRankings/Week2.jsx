@@ -5,112 +5,112 @@ const rankings = [
     {
         //Shiv
         owner: "739628392529408000",
-        position: 10,
-        lastPosition: 10,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Danny
-        owner:"739529793342726144",
-        position: 9,
-        lastPosition: 9,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Allan
-        owner: "740648111118147584",
-        position: 8,
-        lastPosition: 8,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Nicole
-        owner: "739660607032352768",
-        position: 7,
-        lastPosition: 7,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Nandan
-        owner: "741390106056941568",
-        position: 6,
-        lastPosition: 6,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Mike
-        owner: "870659100365737984",
-        position: 5,
-        lastPosition: 5,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Logan
-        owner: "739556159849140224",
-        position: 4,
-        lastPosition: 4,
-        up: "",
-        down: "",
-        game: "",
-        upcoming: "",
-        blurb: ``
-    },
-    {
-        //Neel
-        owner: "722992153168531456",
-        position: 3,
+        position: 1,
         lastPosition: 3,
         up: "",
         down: "",
         game: "",
         upcoming: "",
-        blurb: ``
+        blurb: `Won big`
     },
     {
-        //Saarang
-        owner: "739672661684346880",
+        //Danny
+        owner:"739529793342726144",
+        position: 4,
+        lastPosition: 6,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `won idk`
+    },
+    {
+        //Allan
+        owner: "740648111118147584",
+        position: 5,
+        lastPosition: 9,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `Calvin Ridley!!!!`
+    },
+    {
+        //Nicole
+        owner: "739660607032352768",
+        position: 7,
+        lastPosition: 4,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `oof`
+    },
+    {
+        //Nandan
+        owner: "741390106056941568",
+        position: 8,
+        lastPosition: 7, 
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `Whatever loss`
+    },
+    {
+        //Mike
+        owner: "870659100365737984",
+        position: 6,
+        lastPosition: 5,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `JK Dobbins`
+    },
+    {
+        //Logan
+        owner: "739556159849140224",
+        position: 9,
+        lastPosition: 8,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `Najee`
+    },
+    {
+        //Neel
+        owner: "722992153168531456",
         position: 2,
         lastPosition: 2,
         up: "",
         down: "",
         game: "",
         upcoming: "",
-        blurb: ``
+        blurb: `elite`
     },
     {
-        //Ram
-        owner: "739540158155743232",
-        position: 1,
+        //Saarang
+        owner: "739672661684346880",
+        position: 3,
         lastPosition: 1,
         up: "",
         down: "",
         game: "",
         upcoming: "",
-        blurb: ``
+        blurb: `scraping by`
+    },
+    {
+        //Ram
+        owner: "739540158155743232",
+        position: 11,
+        lastPosition: 10,
+        up: "",
+        down: "",
+        game: "",
+        upcoming: "",
+        blurb: `Deshaun`
     },
 ]
 
@@ -141,23 +141,7 @@ const Ranking = ({ team, wins, losses, position, lastPosition, upcoming, blurb, 
                     )
                 }
             </div>
-            {isMobile ? (
-                    <div style={styles.awardsM}>
-                        <h5 style={styles.awardRow}>Last Game: {game}</h5>
-                        <h5 style={styles.awardRow}>📈: {up}</h5>
-                        <h5 style={styles.awardRow}>📉: {down}</h5>
-                    </div>
-                ) : (
-                    <div style={styles.awardsD}>
-                        <h5>Last Game: {game}</h5>
-                        <h5>📈: {up}</h5>
-                        <h5>📉: {down}</h5>
-                    </div>
-                )
-
-            }
             <p style={styles.blurb}>{blurb}</p>
-            <h6>Upcoming: {upcoming}</h6>
         </div>
     )
 }
@@ -170,7 +154,7 @@ const Week2 = ({ teams, isMobile }) => {
             <h3> WEEK 2 POWER RANKINGS </h3>
             <div style={styles.article}>
                 <p>
-                    
+                    Fully did not do this this week but this is what it would've been
                 </p>
             </div>
             <div style={isMobile ? styles.rankingsContainerM : styles.rankingsContainerD}>
