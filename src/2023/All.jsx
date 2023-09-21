@@ -5,17 +5,11 @@ const weeks = [
     { label: "Week 1", page: "WEEK_1" },
     { label: "Week 2", page: "WEEK_2" },
     { label: "Week 3", page: "WEEK_3" },
-    { label: "Week 4", page: "WEEK_4" },
-    { label: "Week 5", page: "WEEK_5" },
-    { label: "Week 6", page: "WEEK_6" },
-    { label: "Week 7", page: "WEEK_7" },
-    { label: "Week 8", page: "WEEK_8" },
 ];
 
 const All = ({ setPage }) => {
     return (
         <div style={styles.page}>
-            <h5>Champ: Daeviontae's Inferno</h5>
             <h3> ALL POWER RANKINGS </h3>
             {weeks.map((week) => (
                 <Button

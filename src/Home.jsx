@@ -13,8 +13,10 @@ import Week5x2022 from './2022/PowerRankings/Week5'
 import Week6x2022 from './2022/PowerRankings/Week6'
 import Week7x2022 from './2022/PowerRankings/Week7'
 import Week8x2022 from './2022/PowerRankings/Week8'
+import All2023 from './2023/All'
 import Week1 from './2023/PowerRankings/Week1'
 import Week2 from './2023/PowerRankings/Week2'
+import Week3 from './2023/PowerRankings/Week3'
 
 const Home = () => {
 
@@ -54,10 +56,15 @@ const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
                     </h5>
                     <Button 
                         width={250}
-                        label="View Week 2 Power Rankings"
-                        onPress={() => setPage("WEEK_2")}
+                        label="View Week 3 Power Rankings"
+                        onPress={() => setPage("WEEK_3")}
                     />
                     <Standings setTeams={setTeams} isMobile={isMobile}/>
+                    <Button 
+                        width={250}
+                        label="All 2023 Power Rankings"
+                        onPress={() => setPage("2023")}
+                    />
                     <Button 
                         width={250}
                         label="View 2022 Power Rankings"
@@ -68,6 +75,10 @@ const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
         case "2022":
             return (
                 <All2022 setPage={setPage} setTeams={setTeams} />
+            )
+        case "2023":
+            return (
+                <All2023 setPage={setPage} />
             )
         case "WEEK_1_2022":
             return (
@@ -108,6 +119,10 @@ const Contents = ({page, setPage, teams, setTeams, isMobile}) => {
         case "WEEK_2":
             return (
                 <Week2 teams={teams} isMobile={isMobile} />
+            )
+        case "WEEK_3":
+            return (
+                <Week3 teams={teams} isMobile={isMobile} />
             )
         default: 
             return <></>
